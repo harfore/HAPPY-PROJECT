@@ -49,14 +49,26 @@ function truncateText(text, maxLength) {
     return text;
 }
 
-// simple form submission handling.
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
 
-const subscribeForm = document.getElementById("subscribe-form");
+const myQuestions = [
+    { question: "Which of these movies was your favorite?", answers: { a: "Harry Potter and the Philosopher's Stone (2001)", b: "Fight Club (1999)", c: "Interstellar (2014)", d: "Titanic (1997)", e: "Spider-Man (2002)" }, correctAnswer: "c" },
+    { question: "What genre is typically your favorite?", answers: { a: "Action", b: "Romance", c: "Comedy", d: "Science-fiction", e: "Horror" }, correctAnswer: "c" },
+    { question: "What's your sexual orientation?", answers: { a: "Bisexual/Pansexual", b: "Heterosexual", c: "Lesbian", d: "Gay", e: "Asexual" }, correctAnswer: "d" },
+    { question: "What character trait is your favorite?", answers: { a: "Intelligent", b: "Mysterious", c: "Passionate", d: "Strong", e: "Adventurous" }, correctAnswer: "d" },
+    { question: "Pick a female series character.", answers: { a: "Cersei Lannister - Game of Thrones", b: "Eve Polastri - Killing Eve", c: "Annalise Keating - How to Get Away with Murder", d: "Eleven - Stranger Things", e: "Rue Bennett - Euphoria" }, correctAnswer: 'a' },
+    { question: "Which of these do you value most ?", answers: { a: "Integrity", b: "Wisdom", c: "Freedom", d: "Community", e: "Money" }, correctAnswer: 'e' },
+    { question: ""}
+];
 
-subscribeForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const email = event.target.querySelector("input[type='email']").value;
-    // You can handle the form submission, e.g., send the email to a server, etc.
-    console.log(`Subscribed with email: ${email}`);
-    event.target.reset();
-});
+
+const buildQuiz = () => { 
+
+}
+const showResults = () => { // display quiz right away
+
+}
+buildQuiz(); // on submit, show results
+submitButton.addEventListener('click', showResults);

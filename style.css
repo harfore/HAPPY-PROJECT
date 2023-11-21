@@ -99,59 +99,15 @@ anime-details {
     opacity: 1;
 }
 
-/*.subscription {
-    text-align: center;
-    padding: 50px 0;
-}
 
-.subscription input[type="email"] {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-right: 10px;
-}
 
-.subscription button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.subscription button:hover {
-    background-color: #444;
-}*/
-
-/*.search-bar {
+.startbutton {
+    color: lightpink;
+    background-color: lightseagreen;
+    align-items: center;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    transform: translateY(-160%);
-    margin-bottom: 1.5em;
 }
-
-
-.search-input {
-    color: var(--gray-500, #6B7280);
-    padding: 0.6rem .6rem .6rem 3.6rem;
-    border: 1px solid #D1D5DB;
-    border-radius: 6px 0 0 6px;
-    width: 60%;
-    height: 38px;
+.startbutton:hover {
+    background-color: rgb(255, 127, 236);
 }
-
-.search-btn {
-    color: #000;
-    border-radius: 0px 6px 6px 0px;
-    border: 1px solid var(--gray-300, #D1D5DB);
-    background: var(--gray-50, #F9FAFB);
-    width: 20%;
-    padding: 9px 11px 9px 17px;
-    height: 38px;
-    font-weight: 500;
-    cursor: pointer;
-
-}
-
-.search-btn:hover {
-    box-shadow: 1px 1px #A5A5A5;
-}*/
