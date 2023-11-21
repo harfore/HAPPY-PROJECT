@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial black;
     margin: 0;
     padding: 0;
 }
@@ -15,14 +15,14 @@ body {
 }
 
 .banner {
-    background-color: #333;
-    color: #fff;
+    background-color: lightseagreen;
+    color: lightpink;
     text-align: center;
     padding: 50px 0;
 }
 
 .banner h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .featured-anime {
@@ -99,7 +99,7 @@ anime-details {
     opacity: 1;
 }
 
-.subscription {
+/*.subscription {
     text-align: center;
     padding: 50px 0;
 }
@@ -120,9 +120,9 @@ anime-details {
 
 .subscription button:hover {
     background-color: #444;
-}
+}*/
 
-.search-bar {
+/*.search-bar {
     display: flex;
     justify-content: center;
     transform: translateY(-160%);
@@ -154,4 +154,4 @@ anime-details {
 
 .search-btn:hover {
     box-shadow: 1px 1px #A5A5A5;
-}
+}*/
