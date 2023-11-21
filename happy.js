@@ -54,21 +54,32 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
 const myQuestions = [
-    { question: "Which of these movies was your favorite?", answers: { a: "Harry Potter and the Philosopher's Stone (2001)", b: "Fight Club (1999)", c: "Interstellar (2014)", d: "Titanic (1997)", e: "Spider-Man (2002)" }, correctAnswer: "c" },
-    { question: "What genre is typically your favorite?", answers: { a: "Action", b: "Romance", c: "Comedy", d: "Science-fiction", e: "Horror" }, correctAnswer: "c" },
-    { question: "What's your sexual orientation?", answers: { a: "Bisexual/Pansexual", b: "Heterosexual", c: "Lesbian", d: "Gay", e: "Asexual" }, correctAnswer: "d" },
-    { question: "What character trait is your favorite?", answers: { a: "Intelligent", b: "Mysterious", c: "Passionate", d: "Strong", e: "Adventurous" }, correctAnswer: "d" },
-    { question: "Pick a female series character.", answers: { a: "Cersei Lannister - Game of Thrones", b: "Eve Polastri - Killing Eve", c: "Annalise Keating - How to Get Away with Murder", d: "Eleven - Stranger Things", e: "Rue Bennett - Euphoria" }, correctAnswer: 'a' },
-    { question: "Which of these do you value most ?", answers: { a: "Integrity", b: "Wisdom", c: "Freedom", d: "Community", e: "Money" }, correctAnswer: 'e' },
-    { question: ""}
+    { question: "Which of these movies was your favorite?", answers: { a: "Harry Potter and the Philosopher's Stone (2001)", b: "Fight Club (1999)", c: "Interstellar (2014)", d: "Titanic (1997)", e: "Spider-Man (2002)" } },
+    { question: "What genre is typically your favorite?", answers: { a: "Action", b: "Romance", c: "Comedy", d: "Science-fiction", e: "Horror" } },
+    { question: "What's your sexual orientation?", answers: { a: "Bisexual/Pansexual", b: "Heterosexual", c: "Lesbian", d: "Gay", e: "Asexual" } },
+    { question: "What character trait is your favorite?", answers: { a: "Intelligent", b: "Mysterious", c: "Passionate", d: "Strong", e: "Adventurous" } },
+    { question: "Pick a female series character.", answers: { a: "Cersei Lannister - Game of Thrones", b: "Eve Polastri - Killing Eve", c: "Annalise Keating - How to Get Away with Murder", d: "Eleven - Stranger Things", e: "Rue Bennett - Euphoria" } },
+    { question: "Which of these do you value most ?", answers: { a: "Integrity", b: "Wisdom", c: "Freedom", d: "Community", e: "Money" } },
+    { question: "Pick a thinking spot" },
+    { question: "Pick a music artist.", answers: { a: "Damso", b: "Beyoncé", c: "The Weeknd", d: "Drake", e: "Aya Nakamura" } }
 ];
 
 
-const buildQuiz = () => { 
+const buildQuiz = () => {
+    const output = [];
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+        answers = [];
+        for (letter in currentQuestion.answers) {
+            answers.push(`<label> <input type="radio" name="question${questionNumber}" value="${letter}"> ${letter} : ${currentQuestion.answers[letter]} </label>`);
+        }
+        output.push(`<div class="question"> ${currentQuestion.question} </div> <div class="answers"> ${answers.join('')} </div>`);
+    });
+    quizContainer.innerHTML = output.join('');
+};
 
-}
 const showResults = () => { // display quiz right away
 
 }
 buildQuiz(); // on submit, show results
+
 submitButton.addEventListener('click', showResults);
