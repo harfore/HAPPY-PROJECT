@@ -23,73 +23,71 @@ let tabr = [{ a: "Harry Potter and the Philosopher's Stone (2001)", b: "Fight Cl
 function posequestion1() {
     question.innerHTML = `<h1>${tabq[0]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion2()"><img height=100 src="image/harryPotter.gif">${tabr[0].a}</button>
-<button onclick="posequestion2()"><img height=100 src="image/fightClub.gif">${tabr[0].b}</button>
-<button onclick="posequestion2()"><img height=100 src="image/interstellar.gif">${tabr[0].c}</button>
-<button onclick="posequestion2()"><img height=100 src="image/titanic.gif">${tabr[0].d}</button>
-<button onclick="posequestion2()"><img height=100 src="image/spiderman.gif">${tabr[0].e}</button>`
-}
+        `<button onclick="posequestion2(); addScienceFiction()"><img height=100 src="image/harryPotter.gif">${tabr[0].a}</button>
+<button onclick="posequestion2(); addComedy()" ><img height=100 src="image/fightClub.gif">${tabr[0].b}</button>
+<button onclick="posequestion2(); addHorror()"><img height=100 src="image/interstellar.gif">${tabr[0].c}</button>
+<button onclick="posequestion2(); addRomance()"><img height=100 src="image/titanic.gif">${tabr[0].d}</button>
+<button onclick="posequestion2(); addAction()"><img height=100 src="image/spiderman.gif">${tabr[0].e}</button>`
 
-const getResult = () => {
-    element.addEventListener('button onclick', function () {
+    /*button.addEventListener('onclick', function () {
         console.log('cliqué')
-    })
-};
+    })*/
 
+}
 function posequestion2() {
     question.innerHTML = `<h1>${tabq[1]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion4()"><img height=100 src="image/action.gif">${tabr[1].a}</button>
-<button onclick="posequestion4()"><img height=100 src="image/loveStory.gif">${tabr[1].b}</button>
-<button onclick="posequestion4()"><img height=100 src="image/comedy.gif">${tabr[1].c}</button>
-<button onclick="posequestion4()"><img height=100 src="image/sciFi.gif">${tabr[1].d}</button>
-<button onclick="posequestion4()"><img height=100 src="image/horror.gif">${tabr[1].e}</button>`
+        `<button onclick="posequestion4(); addAction()"><img height=100 src="image/action.gif">${tabr[1].a}</button>
+<button onclick="posequestion4(); addRomance()"><img height=100 src="image/loveStory.gif">${tabr[1].b}</button>
+<button onclick="posequestion4(); addComedy()"><img height=100 src="image/comedy.gif">${tabr[1].c}</button>
+<button onclick="posequestion4(); addSF()"><img height=100 src="image/sciFi.gif">${tabr[1].d}</button>
+<button onclick="posequestion4(); addHorror()"><img height=100 src="image/horror.gif">${tabr[1].e}</button>`
 }
 
 function posequestion4() {
     question.innerHTML = `<h1>${tabq[3]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion5()"><img height=100 src="image/.gif">${tabr[3].a}</button>
-<button onclick="posequestion5()"><img height=100 src="image/.gif">${tabr[3].b}</button>
-<button onclick="posequestion5()"><img height=100 src="image/.gif">${tabr[3].c}</button>
-<button onclick="posequestion5()"><img height=100 src="image/.gif">${tabr[3].d}</button>
-<button onclick="posequestion5()"><img height=100 src="image/.gif">${tabr[3].e}</button>`
+        `<button onclick="posequestion5(); addHorror()"><img height=100 src="image/.gif">${tabr[3].a}</button>
+<button onclick="posequestion5(); addRomance()"><img height=100 src="image/.gif">${tabr[3].b}</button>
+<button onclick="posequestion5(); addComedy()"><img height=100 src="image/.gif">${tabr[3].c}</button>
+<button onclick="posequestion5(); addAction()"><img height=100 src="image/.gif">${tabr[3].d}</button>
+<button onclick="posequestion5(); addSF()"><img height=100 src="image/.gif">${tabr[3].e}</button>`
 }
 
 function posequestion5() {
     question.innerHTML = `<h1>${tabq[4]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion6()"><img height=100 src="image/cersei-lannister-game-of-thrones.gif">${tabr[4].a}</button>
-<button onclick="posequestion6()"><img height=100 src="image/eve polastri.gif">${tabr[4].b}</button>
-<button onclick="posequestion6()"><img height=100 src="image/annalise keating.gif">${tabr[4].c}</button>
-<button onclick="posequestion6()"><img height=100 src="image/eleven.gif">${tabr[4].d}</button>
-<button onclick="posequestion6()"><img height=100 src="image/rue.gif">${tabr[4].e}</button>`
+        `<button onclick="posequestion6(); addHorror()"><img height=100 src="image/cersei-lannister-game-of-thrones.gif">${tabr[4].a}</button>
+<button onclick="posequestion6(); addAction()"><img height=100 src="image/eve polastri.gif">${tabr[4].b}</button>
+<button onclick="posequestion6(); addComedy()"><img height=100 src="image/annalise keating.gif">${tabr[4].c}</button>
+<button onclick="posequestion6(); addSF"><img height=100 src="image/eleven.gif">${tabr[4].d}</button>
+<button onclick="posequestion6(); addRomance()"><img height=100 src="image/rue.gif">${tabr[4].e}</button>`
 }
 
 function posequestion6() {
     question.innerHTML = `<h1>${tabq[5]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion7()"><img height=100 src="image/.gif">${tabr[5].a}</button>
-<button onclick="posequestion7()"><img height=100 src="image/.gif">${tabr[5].b}</button>
-<button onclick="posequestion7()"><img height=100 src="image/.gif">${tabr[5].c}</button>
-<button onclick="posequestion7()"><img height=100 src="image/.gif">${tabr[5].d}</button>
-<button onclick="posequestion7()"><img height=100 src="image/.gif">${tabr[5].e}</button>`
+        `<button onclick="posequestion7(); addAction()"><img height=100 src="image/.gif">${tabr[5].a}</button>
+<button onclick="posequestion7(); addComedy()"><img height=100 src="image/.gif">${tabr[5].b}</button>
+<button onclick="posequestion7(); addSF()"><img height=100 src="image/.gif">${tabr[5].c}</button>
+<button onclick="posequestion7(); addRomance()"><img height=100 src="image/.gif">${tabr[5].d}</button>
+<button onclick="posequestion7(); addHorror()"><img height=100 src="image/.gif">${tabr[5].e}</button>`
 }
 
 function posequestion7() {
     question.innerHTML = `<h1>${tabq[6]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion8()"><img height=100 src="image/damso.gif">${tabr[6].a}</button>
-<button onclick="posequestion8()"><img height=100 src="image/beyoncé.webp">${tabr[6].b}</button>
-<button onclick="posequestion8()"><img height=100 src="image/the weeknd.webp">${tabr[6].c}</button>
-<button onclick="posequestion8()"><img height=100 src="image/drake.gif">${tabr[6].d}</button>
-<button onclick="posequestion8()"><img height=100 src="image/aya.gif">${tabr[6].e}</button>`
+        `<button onclick="posequestion8(); addSF()"><img height=100 src="image/damso.gif">${tabr[6].a}</button>
+<button onclick="posequestion8(); addAction()"><img height=100 src="image/beyoncé.webp">${tabr[6].b}</button>
+<button onclick="posequestion8(); addHorror()"><img height=100 src="image/the weeknd.webp">${tabr[6].c}</button>
+<button onclick="posequestion8(); addComedy()"><img height=100 src="image/drake.gif">${tabr[6].d}</button>
+<button onclick="posequestion8(); addRomance()"><img height=100 src="image/aya.gif">${tabr[6].e}</button>`
 }
 
 function posequestion8() {
     question.innerHTML = `<h1>${tabq[7]}</h1>`
     reponse.innerHTML =
-        `<button onclick="resultat()"><img height=100 src="image/.gif">${tabr[7].a}</button>
+        `<button onclick="resultat(); addHorror()"><img height=100 src="image/.gif">${tabr[7].a}</button>
 <button onclick="resultat()"><img height=100 src="image/.gif">${tabr[7].b}</button>
 <button onclick="resultat()"><img height=100 src="image/.gif">${tabr[7].c}</button>
 <button onclick="resultat()"><img height=100 src="image/.gif">${tabr[7].d}</button>
@@ -103,7 +101,29 @@ let compteurComedie = [];
 let compteurSF = [];
 let compteurHorror = [];
 
-const result = await fetch(`https://myanimelist.net/anime/genre/1/Action?filter=airing&order_by=popularity`);
+const addAction = () => {
+    compteurAction += 5
+}
+
+const addRomance = () => {
+    compteurRomance += 5
+}
+
+const addComedy = () = {
+    compteurComedie += 5
+}
+
+const addSF = () = {
+    compteurSF += 5
+}
+
+const addHorror = () = {
+    compteurHorror += 5
+}
+
+console.log(compteurAction)
+
+// const result = await fetch(`https://myanimelist.net/anime/genre/1/Action?filter=airing&order_by=popularity`);
 
 
 
