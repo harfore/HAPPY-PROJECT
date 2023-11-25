@@ -9,29 +9,25 @@ let tabq = ["Which of these movies was your favorite?",
     "Pick a female series character.",
     "Which of these do you value most ?",
     "Pick a music artist.",
-    "Pick a thinking spot"]
+    "Pick a thinking spot."]
 
-let tabr = [{ a: "Harry Potter and the Philosopher's Stone (2001)", b: "Fight Club (1999)", c: "Interstellar (2014)", d: "Titanic (1997)", e: "Spider-Man: Into the Spider-Verse (2018)" },
+let tabr = [{ a: "Harry Potter and the Prisoner of Azkaban (2004)", b: "Fight Club (1999)", c: "Interstellar (2014)", d: "Titanic (1997)", e: "Spider-Man: Into the Spider-Verse (2018)" },
 { a: "Action", b: "Romance", c: "Comedy", d: "Science-fiction", e: "Horror" },
 { a: "Pasta" },
 { a: "Intelligent", b: "Mysterious", c: "Passionate", d: "Strong", e: "Adventurous" },
 { a: "Cersei Lannister - Game of Thrones", b: "Eve Polastri - Killing Eve", c: "Annalise Keating - How to Get Away with Murder", d: "Eleven - Stranger Things", e: "Rue Bennett - Euphoria" },
 { a: "Integrity", b: "Wisdom", c: "Freedom", d: "Community", e: "Money" },
 { a: "Damso", b: "Beyoncé", c: "The Weeknd", d: "Drake", e: "Aya Nakamura" },
-{ a: "img", b: "img", c: "img", d: "img", e: "img" }]
+{ a: "post.png", b: "pink.png", c: "beach.png", d: "space.jpg", e: "city.png" }]
 
 function posequestion1() {
     question.innerHTML = `<h1>${tabq[0]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion2(); addScienceFiction()"><img height=100 src="image/harryPotter.gif">${tabr[0].a}</button>
-<button onclick="posequestion2(); addComedy()" ><img height=100 src="image/fightClub.gif">${tabr[0].b}</button>
+        `<button onclick="posequestion2(); addSF()"><img height=100 src="image/harryPotter.gif">${tabr[0].a}</button>
+<button onclick="posequestion2(); addComedy()"><img height=100 src="image/fightClub.gif">${tabr[0].b}</button>
 <button onclick="posequestion2(); addHorror()"><img height=100 src="image/interstellar.gif">${tabr[0].c}</button>
 <button onclick="posequestion2(); addRomance()"><img height=100 src="image/titanic.gif">${tabr[0].d}</button>
 <button onclick="posequestion2(); addAction()"><img height=100 src="image/spiderman.gif">${tabr[0].e}</button>`
-
-    /*button.addEventListener('onclick', function () {
-        console.log('cliqué')
-    })*/
 
 }
 function posequestion2() {
@@ -87,46 +83,111 @@ function posequestion7() {
 function posequestion8() {
     question.innerHTML = `<h1>${tabq[7]}</h1>`
     reponse.innerHTML =
-        `<button onclick="resultat(); addHorror()"><img height=100 src="image/.gif">${tabr[7].a}</button>
-<button onclick="resultat()"><img height=100 src="image/.gif">${tabr[7].b}</button>
-<button onclick="resultat()"><img height=100 src="image/.gif">${tabr[7].c}</button>
-<button onclick="resultat()"><img height=100 src="image/.gif">${tabr[7].d}</button>
-<button onclick="resultat()"><img height=100 src="image/.gif">${tabr[7].e}</button>`
+        `<button onclick="poequestion9(); addHorror()"><img height=100 src="image/.gif">${tabr[7].a}</button>
+<button onclick="posequestion9()"><img height=100 src="image/.gif">${tabr[7].b}</button>
+<button onclick="posequestion9()"><img height=100 src="image/.gif">${tabr[7].c}</button>
+<button onclick="posequestion9()"><img height=100 src="image/.gif">${tabr[7].d}</button>
+<button onclick="posequestion9()"><img height=100 src="image/.gif">${tabr[7].e}</button>`
+}
+
+function posequestion9() {
+    question.innerHTML = `<h1>${tabq[7]}</h1>`
+    reponse.innerHTML =
+        `<button onclick="resultat(); addHorror()"><img height=100 src="post.png">${tabr[7].a}</button>
+<button onclick="resultat()"><img height=100 src="pink.png">${tabr[7].b}</button>
+<button onclick="resultat()"><img height=100 src="beach.png">${tabr[7].c}</button>
+<button onclick="resultat()"><img height=100 src="space.jpg">${tabr[7].d}</button>
+<button onclick="resultat()"><img height=100 src="city.png">${tabr[7].e}</button>`
 }
 
 
 let compteurAction = [];
 let compteurRomance = [];
-let compteurComedie = [];
+let compteurComedy = [];
 let compteurSF = [];
 let compteurHorror = [];
 
 const addAction = () => {
-    compteurAction += 5
+    compteurAction = compteurAction + 5
+    console.log(compteurAction)
+    return compteurAction
 }
 
 const addRomance = () => {
-    compteurRomance += 5
+    compteurRomance = compteurRomance + 5
+    console.log(compteurRomance)
+    return compteurRomance
 }
 
 const addComedy = () => {
-    compteurComedie += 5
+    compteurComedy = compteurComedy + 5
+    console.log(compteurComedy)
+    return compteurComedy
 }
 
 const addSF = () => {
-    compteurSF += 5
+    compteurSF = compteurSF + 5
+    console.log(compteurSF)
+    return compteurSF
 }
 
 const addHorror = () => {
-    compteurHorror += 5
+    compteurHorror = + compteurHorror + 5
+    console.log(compteurHorror)
+    return compteurHorror
 }
 
-console.log(compteurAction)
+function resultat() {
+    let result;
+    if (compteurAction > compteurComedy &&
+        compteurAction > compteurHorror &&
+        compteurAction > compteurRomance &&
+        compteurAction > compteurSF) {
+        result = 'action'
+        /** function display_image(src, width, height, alt) {
+            var a = document.createElement("img");
+            a.src = src;
+            a.width = width;
+            a.height = height;
+            a.alt = alt;
+            document.body.appendChild(a);
+        }
+        display_image('JavaScript.jpg',
+            276,
+            110,
+            'JavaScriptImage'); */
 
-// const result = await fetch(`https://myanimelist.net/anime/genre/1/Action?filter=airing&order_by=popularity`);
+    } else if (compteurRomance > compteurAction &&
+        compteurRomance > compteurComedy &&
+        compteurRomance > compteurHorror &&
+        compteurRomance > compteurSF) {
+        result = 'romance'
+
+    } else if (compteurComedy > compteurAction &&
+        compteurComedy > compteurHorror &&
+        compteurComedy > compteurSF &&
+        compteurComedy > compteurHorror) {
+        result = 'comedy'
+
+    } else if (compteurSF > compteurAction &&
+        compteurSF > compteurRomance &&
+        compteurSF > compteurComedy &&
+        compteurSF > compteurHorror) {
+        result = 'science-fiction'
+
+    } else if (compteurHorror > compteurAction &&
+        compteurHorror > compteurRomance &&
+        compteurHorror > compteurComedy &&
+        compteurHorror > compteurSF) {
+        result = 'horror'
+    }
+
+}
 
 
-
+// image hypertexte, l'image peut changer selon l'anime le mieux noté
+// <a href="https://www.youtube.com/watch?v=WWTiBhmrTGc"><img
+// src="https://tse4.mm.bing.net/th?id=OIP.fQUizCzWpXjTq0QWK8YrHQAAAA&pid=Api" alt="The 5th Floor" /></a>
 
 
 // variable qui liste les réponses
