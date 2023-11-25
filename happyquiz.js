@@ -48,10 +48,10 @@ function posequestion4() {
     question.innerHTML = `<h1>${tabq[3]}</h1>`
     reponse.innerHTML =
         `<button onclick="posequestion5(); addHorror()"><img height=100 src="image/.gif">${tabr[3].a}</button>
-<button onclick="posequestion5(); addRomance()"><img height=100 src="image/.gif">${tabr[3].b}</button>
-<button onclick="posequestion5(); addComedy()"><img height=100 src="image/.gif">${tabr[3].c}</button>
-<button onclick="posequestion5(); addAction()"><img height=100 src="image/.gif">${tabr[3].d}</button>
-<button onclick="posequestion5(); addSF()"><img height=100 src="image/.gif">${tabr[3].e}</button>`
+<button onclick="posequestion5(); addRomance()"><img height=100 src="image/mysterious.webp">${tabr[3].b}</button>
+<button onclick="posequestion5(); addComedy()"><img height=100 src="image/passionate.gif">${tabr[3].c}</button>
+<button onclick="posequestion5(); addAction()"><img height=100 src="image/strong.gif">${tabr[3].d}</button>
+<button onclick="posequestion5(); addSF()"><img height=100 src="image/adventurous.gif">${tabr[3].e}</button>`
 }
 
 function posequestion5() {
@@ -68,10 +68,10 @@ function posequestion6() {
     question.innerHTML = `<h1>${tabq[5]}</h1>`
     reponse.innerHTML =
         `<button onclick="posequestion7(); addAction()"><img height=100 src="image/.gif">${tabr[5].a}</button>
-<button onclick="posequestion7(); addComedy()"><img height=100 src="image/.gif">${tabr[5].b}</button>
-<button onclick="posequestion7(); addSF()"><img height=100 src="image/.gif">${tabr[5].c}</button>
-<button onclick="posequestion7(); addRomance()"><img height=100 src="image/.gif">${tabr[5].d}</button>
-<button onclick="posequestion7(); addHorror()"><img height=100 src="image/.gif">${tabr[5].e}</button>`
+<button onclick="posequestion7(); addComedy()"><img height=100 src="image/wisdom.gif">${tabr[5].b}</button>
+<button onclick="posequestion7(); addSF()"><img height=100 src="image/freedom.gif">${tabr[5].c}</button>
+<button onclick="posequestion7(); addRomance()"><img height=100 src="image/community.gif">${tabr[5].d}</button>
+<button onclick="posequestion7(); addHorror()"><img height=100 src="image/money.gif">${tabr[5].e}</button>`
 }
 
 function posequestion7() {
@@ -109,15 +109,15 @@ const addRomance = () => {
     compteurRomance += 5
 }
 
-const addComedy = () = {
+const addComedy = () => {
     compteurComedie += 5
 }
 
-const addSF = () = {
+const addSF = () => {
     compteurSF += 5
 }
 
-const addHorror = () = {
+const addHorror = () => {
     compteurHorror += 5
 }
 
