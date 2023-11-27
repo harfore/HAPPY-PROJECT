@@ -24,6 +24,7 @@ body {
     border: 3px solid white;
     transition: .3s all ease-in-out;
     border-radius: 40px;
+    position: relative; top: -30px
 }
 .startbutton:hover {
     background: rgba(black, 0.2);
@@ -68,6 +69,7 @@ body {
 #titletop {
     color: lightpink;
 }
+
 #yt {
     display: flex;
     align-content: center;
@@ -78,8 +80,10 @@ body {
     display: flexbox;
     background-color: lightseagreen;
     color: lightpink;
+    position:relative; top: -40px;
     height: 800px;
 }
+
 #reponse {
     display: vertical;
     margin: 0% 0% 0% ;

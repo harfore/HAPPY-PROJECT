@@ -23,61 +23,61 @@ let tabr = [{ a: "Harry Potter and the Prisoner of Azkaban (2004)", b: "Fight Cl
 function posequestion1() {
     question.innerHTML = `<h1>${tabq[0]}</h1>`
     reponse.innerHTML =
-        `<button class="button" onclick="posequestion2(); addSF()"><img height=120 src="image/harryPotter.gif"><br>${tabr[0].a}</button>
-<button class="button" onclick="posequestion2(); addComedy()"><img height=120 src="image/fightClub.gif"><br>${tabr[0].b}</button>
-<button class="button" onclick="posequestion2(); addHorror()"><img height=120 src="image/interstellar.gif"><br>${tabr[0].c}</button>
-<button class="button" onclick="posequestion2(); addRomance()"><img height=120 src="image/titanic.gif"><br>${tabr[0].d}</button>
-<button class="button" onclick="posequestion2(); addAction()"><img height=120 src="image/spiderman.gif"><br>${tabr[0].e}</button>`
+        `<button class="button" onclick="posequestion2(); addSF()"><img height=100 src="image/harryPotter.gif"><br><b>${tabr[0].a}</b></button>
+<button class="button" onclick="posequestion2(); addComedy()"><img height=100 src="image/fightClub.gif"><br><b>${tabr[0].b}</b></button>
+<button class="button" onclick="posequestion2(); addHorror()"><img height=100 src="image/interstellar.gif"><br><b>${tabr[0].c}</b></button>
+<button class="button" onclick="posequestion2(); addRomance()"><img height=100 src="image/titanic.gif"><br><b>${tabr[0].d}</b></button>
+<button class="button" onclick="posequestion2(); addAction()"><img height=100 src="image/spiderman.gif"><br><b>${tabr[0].e}</b></button>`
 
 }
 function posequestion2() {
     question.innerHTML = `<h1>${tabq[1]}</h1>`
     reponse.innerHTML =
-        `<button class="button" onclick="posequestion4(); addAction()"><img height=140 src="image/action.gif"><br>${tabr[1].a}</button>
-<button class="button" onclick="posequestion4(); addRomance()"><img height=140 src="image/loveStory.gif"><br>${tabr[1].b}</button>
-<button class="button" onclick="posequestion4(); addComedy()"><img height=140 src="image/comedy.gif"><br>${tabr[1].c}</button>
-<button class="button" onclick="posequestion4(); addSF()"><img height=140 src="image/sciFi.gif"><br>${tabr[1].d}</button>
-<button class="button" onclick="posequestion4(); addHorror()"><img height=140 src="image/horror.gif"><br>${tabr[1].e}</button>`
+        `<button class="button" onclick="posequestion4(); addAction()"><img height=140 src="image/action.gif"><br><b>${tabr[1].a}</b></button>
+<button class="button" onclick="posequestion4(); addRomance()"><img height=140 src="image/loveStory.gif"><br><b>${tabr[1].b}</b></button>
+<button class="button" onclick="posequestion4(); addComedy()"><img height=140 src="image/comedy.gif"><br><b>${tabr[1].c}</b></button>
+<button class="button" onclick="posequestion4(); addSF()"><img height=140 src="image/sciFi.gif"><br><b>${tabr[1].d}</b></button>
+<button class="button" onclick="posequestion4(); addHorror()"><img height=140 src="image/horror.gif"><br><b>${tabr[1].e}</b></button>`
 }
 
 function posequestion4() {
     question.innerHTML = `<h1>${tabq[3]}</h1>`
     reponse.innerHTML =
-        `<button class="button" onclick="posequestion5(); addHorror()"><img height=130 src="image/intelligent.webp"><br>${tabr[3].a}</button>
-<button class="button" onclick="posequestion5(); addRomance()"><img height=130 src="image/mysterious.webp"><br>${tabr[3].b}</button>
-<button class="button" onclick="posequestion5(); addComedy()"><img height=130 src="image/passionate.gif"><br>${tabr[3].c}</button>
-<button class="button" onclick="posequestion5(); addAction()"><img height=130 src="image/strong.gif"><br>${tabr[3].d}</button>
-<button class="button" onclick="posequestion5(); addSF()"><img height=130 src="image/adventurous.gif"><br>${tabr[3].e}</button>`
+        `<button class="button" onclick="posequestion5(); addHorror()"><img height=130 src="image/intelligent.webp"><br><b>${tabr[3].a}</b></button>
+<button class="button" onclick="posequestion5(); addRomance()"><img height=130 src="image/mysterious.webp"><br><b>${tabr[3].b}</b></button>
+<button class="button" onclick="posequestion5(); addComedy()"><img height=130 src="image/passionate.gif"><br><b>${tabr[3].c}</b></button>
+<button class="button" onclick="posequestion5(); addAction()"><img height=130 src="image/strong.gif"><br><b>${tabr[3].d}</b></button>
+<button class="button" onclick="posequestion5(); addSF()"><img height=130 src="image/adventurous.gif"><br><b>${tabr[3].e}</b></button>`
 }
 
 function posequestion5() {
     question.innerHTML = `<h1>${tabq[4]}</h1>`
     reponse.innerHTML =
-        `<button class="button" onclick="posequestion6(); addHorror()"><img height=125 src="image/cersei-lannister-game-of-thrones.gif"><br>${tabr[4].a}</button>
-<button class="button" onclick="posequestion6(); addAction()"><img height=125 src="image/eve polastri.gif"><br>${tabr[4].b}</button>
-<button class="button" onclick="posequestion6(); addComedy()"><img height=125 src="image/annalise keating.gif"><br>${tabr[4].c}</button>
-<button class="button" onclick="posequestion6(); addSF()"><img height=125 src="image/eleven.gif"><br>${tabr[4].d}</button>
-<button class="button" onclick="posequestion6(); addRomance()"><img height=125 src="image/rue.gif"><br>${tabr[4].e}</button>`
+        `<button class="button" onclick="posequestion6(); addHorror()"><img height=125 src="image/cersei-lannister-game-of-thrones.gif"><br><b>${tabr[4].a}</b></button>
+<button class="button" onclick="posequestion6(); addAction()"><img height=125 src="image/eve polastri.gif"><br><b>${tabr[4].b}</b></button>
+<button class="button" onclick="posequestion6(); addComedy()"><img height=125 src="image/annalise keating.gif"><br><b>${tabr[4].c}</b></button>
+<button class="button" onclick="posequestion6(); addSF"><img height=125 src="image/eleven.gif"><br><b>${tabr[4].d}</b></button>
+<button class="button" onclick="posequestion6(); addRomance()"><img height=125 src="image/rue.gif"><br><b>${tabr[4].e}</b></button>`
 }
 
 function posequestion6() {
     question.innerHTML = `<h1>${tabq[5]}</h1>`
     reponse.innerHTML =
-        `<button class="button" onclick="posequestion7(); addAction()"><img height=150 src="image/integrity.webp"><br>${tabr[5].a}</button>
-<button class="button" onclick="posequestion7(); addComedy()"><img height=150 src="image/wisdom.gif"><br>${tabr[5].b}</button>
-<button class="button" onclick="posequestion7(); addSF()"><img height=150 src="image/freedom.gif"><br>${tabr[5].c}</button>
-<button class="button" onclick="posequestion7(); addRomance()"><img height=150 src="image/community.gif"><br>${tabr[5].d}</button>
-<button class="button" onclick="posequestion7(); addHorror()"><img height=150 src="image/money.gif"><br>${tabr[5].e}</button>`
+        `<button class="button" onclick="posequestion7(); addAction()"><img height=150 src="image/integrity.webp"><br><b>${tabr[5].a}</b></button>
+<button class="button" onclick="posequestion7(); addComedy()"><img height=150 src="image/wisdom.gif"><br><b>${tabr[5].b}</b></button>
+<button class="button" onclick="posequestion7(); addSF()"><img height=150 src="image/freedom.gif"><br><b>${tabr[5].c}</b></button>
+<button class="button" onclick="posequestion7(); addRomance()"><img height=150 src="image/community.gif"><br><b>${tabr[5].d}</b></button>
+<button class="button" onclick="posequestion7(); addHorror()"><img height=150 src="image/money.gif"><br><b>${tabr[5].e}</b></button>`
 }
 
 function posequestion7() {
     question.innerHTML = `<h1>${tabq[6]}</h1>`
     reponse.innerHTML =
-        `<button class="button" onclick="posequestion8(); addSF()"><img height=140 src="image/damso.gif"><br>${tabr[6].a}</button>
-<button class="button" onclick="posequestion8(); addAction()"><img height=140 src="image/beyoncé.webp"><br>${tabr[6].b}</button>
-<button class="button" onclick="posequestion8(); addHorror()"><img height=140 src="image/the weeknd.webp"><br>${tabr[6].c}</button>
-<button class="button" onclick="posequestion8(); addComedy()"><img height=140 src="image/drake.gif"><br>${tabr[6].d}</button>
-<button class="button" onclick="posequestion8(); addRomance()"><img height=140 src="image/aya.gif"><br>${tabr[6].e}</button>`
+        `<button class="button" onclick="posequestion8(); addSF()"><img height=150 src="image/damso.gif"><br><b>${tabr[6].a}</b></button>
+<button class="button" onclick="posequestion8(); addAction()"><img height=150 src="image/beyoncé.webp"><br><b>${tabr[6].b}</b></button>
+<button class="button" onclick="posequestion8(); addHorror()"><img height=150 src="image/the weeknd.webp"><br><b>${tabr[6].c}</b></button>
+<button class="button" onclick="posequestion8(); addComedy()"><img height=150 src="image/drake.gif"><br><b>${tabr[6].d}</b></button>
+<button class="button" onclick="posequestion8(); addRomance()"><img height=150 src="image/aya.gif"><br><b>${tabr[6].e}</b></button>`
 }
 
 function posequestion8() {
