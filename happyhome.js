@@ -73,7 +73,7 @@ buttonleft.addEventListener('click', async (e) => {
             pose = 4
         }
         else if (pose == 2) {
-            title.innerText = "Top 3 trendy anime"
+            title.innerText = "Top 3 trendy animes"
             url = 'image/tv.gif'
             photo.src = url
             youtube.src = ''
