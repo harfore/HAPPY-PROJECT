@@ -88,21 +88,6 @@ function posequestion8() {
 <button onclick="resultat()"><img width="200" height="400" style="border:1px solid" src="pictures/beach.png">${tabr[7].c}</button>
 <button onclick="resultat()"><img width="200" height="400" style="border:1px solid" src="pictures/space.jpg">${tabr[7].d}</button>
 <button onclick="resultat()"><img width="200" height="400" style="border:1px solid" src="pictures/city.png">${tabr[7].e}</button>`
-            `<button class="button" onclick="poequestion9(); addHorror()"><img height=100 src="image/.gif">${tabr[7].a}</button>
-<button class="button" onclick="posequestion9()"><img height=100 src="image/.gif">${tabr[7].b}</button>
-<button class="button" onclick="posequestion9()"><img height=100 src="image/.gif">${tabr[7].c}</button>
-<button class="button" onclick="posequestion9()"><img height=100 src="image/.gif">${tabr[7].d}</button>
-<button class="button" onclick="posequestion9()"><img height=100 src="image/.gif">${tabr[7].e}</button>`
-}
-
-function posequestion9() {
-    question.innerHTML = `<h1>${tabq[7]}</h1>`
-    reponse.innerHTML =
-        `<button onclick="resultat(); addHorror()"><img height=100 src="post.png">${tabr[7].a}</button>
-<button onclick="resultat()"><img height=100 src="pink.png">${tabr[7].b}</button>
-<button onclick="resultat()"><img height=100 src="beach.png">${tabr[7].c}</button>
-<button onclick="resultat()"><img height=100 src="space.jpg">${tabr[7].d}</button>
-<button onclick="resultat()"><img height=100 src="city.png">${tabr[7].e}</button>`
 }
 
 
