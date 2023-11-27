@@ -43,7 +43,7 @@ function posequestion2() {
 function posequestion4() {
     question.innerHTML = `<h1>${tabq[3]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion5(); addHorror()"><img height=200 src="image/.gif"><br>${tabr[3].a}</button>
+        `<button onclick="posequestion5(); addHorror()"><img height=200 src="image/intelligent.webp"><br>${tabr[3].a}</button>
 <button onclick="posequestion5(); addRomance()"><img height=200 src="image/mysterious.webp"><br>${tabr[3].b}</button>
 <button onclick="posequestion5(); addComedy()"><img height=200 src="image/passionate.gif"><br>${tabr[3].c}</button>
 <button onclick="posequestion5(); addAction()"><img height=200 src="image/strong.gif"><br>${tabr[3].d}</button>
@@ -63,7 +63,7 @@ function posequestion5() {
 function posequestion6() {
     question.innerHTML = `<h1>${tabq[5]}</h1>`
     reponse.innerHTML =
-        `<button onclick="posequestion7(); addAction()"><img height=150 src="image/.gif"><br>${tabr[5].a}</button>
+        `<button onclick="posequestion7(); addAction()"><img height=150 src="image/integrity.webp"><br>${tabr[5].a}</button>
 <button onclick="posequestion7(); addComedy()"><img height=150 src="image/wisdom.gif"><br>${tabr[5].b}</button>
 <button onclick="posequestion7(); addSF()"><img height=150 src="image/freedom.gif"><br>${tabr[5].c}</button>
 <button onclick="posequestion7(); addRomance()"><img height=150 src="image/community.gif"><br>${tabr[5].d}</button>
