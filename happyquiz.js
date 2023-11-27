@@ -159,9 +159,16 @@ function resultat() {
         compteurHorror > compteurSF) {
         return result = 5
     }
-    if (result === 1) {
-
-    }
+    /** à tirer de l'api pour le résultat :
+     * - images
+     * - titres
+     * - episodes
+     * - duration
+     * - rating
+     * - score
+     * - synopsis
+     * - year
+     */
 }
 
 
