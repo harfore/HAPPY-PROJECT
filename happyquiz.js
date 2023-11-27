@@ -83,19 +83,19 @@ function posequestion7() {
 function posequestion8() {
     question.innerHTML = `<h1>${tabq[7]}</h1>`
     reponse.innerHTML =
-        `<button onclick="resultat()"><img width="200" height="400" style="border:1px solid" src="pictures/post.png">${tabr[7].a}</button>
-<button onclick="resultat()"><img width="200" height="400" style="border:1px solid" src="pictures/pink.png">${tabr[7].b}</button>
-<button onclick="resultat()"><img width="200" height="400" style="border:1px solid" src="pictures/beach.png">${tabr[7].c}</button>
-<button onclick="resultat()"><img width="200" height="400" style="border:1px solid" src="pictures/space.jpg">${tabr[7].d}</button>
-<button onclick="resultat()"><img width="200" height="400" style="border:1px solid" src="pictures/city.png">${tabr[7].e}</button>`
+        `<button onclick="resultat(); addHorror"><img width="200" height="400" style="border:1px solid" src="pictures/post.png">${tabr[7].a}</button>
+<button onclick="resultat(); addRomance()"><img width="200" height="400" style="border:1px solid" src="pictures/pink.png">${tabr[7].b}</button>
+<button onclick="resultat(); addAction()"><img width="200" height="400" style="border:1px solid" src="pictures/beach.png">${tabr[7].c}</button>
+<button onclick="resultat(); addSF()"><img width="200" height="400" style="border:1px solid" src="pictures/space.jpg">${tabr[7].d}</button>
+<button onclick="resultat(); addComedy()"><img width="200" height="400" style="border:1px solid" src="pictures/city.png">${tabr[7].e}</button>`
 }
 
 
-let compteurAction = [];
-let compteurRomance = [];
-let compteurComedy = [];
-let compteurSF = [];
-let compteurHorror = [];
+let compteurAction = 0;
+let compteurRomance = 0;
+let compteurComedy = 0;
+let compteurSF = 0;
+let compteurHorror = 0;
 
 const addAction = () => {
     compteurAction += 5
@@ -133,46 +133,37 @@ function resultat() {
         compteurAction > compteurHorror &&
         compteurAction > compteurRomance &&
         compteurAction > compteurSF) {
-        return result = 'action'
-        /** function display_image(src, width, height, alt) {
-            var a = document.createElement("img");
-            a.src = src;
-            a.width = width;
-            a.height = height;
-            a.alt = alt;
-            document.body.appendChild(a);
-        }
-        display_image('JavaScript.jpg',
-            276,
-            110,
-            'JavaScriptImage'); */
+        return result = 1
 
     } else if (compteurRomance > compteurAction &&
         compteurRomance > compteurComedy &&
         compteurRomance > compteurHorror &&
         compteurRomance > compteurSF) {
-        return result = 'romance'
+        return result = 2
 
     } else if (compteurComedy > compteurAction &&
         compteurComedy > compteurHorror &&
         compteurComedy > compteurSF &&
         compteurComedy > compteurHorror) {
-        return result = 'comedy'
+        return result = 3
 
     } else if (compteurSF > compteurAction &&
         compteurSF > compteurRomance &&
         compteurSF > compteurComedy &&
         compteurSF > compteurHorror) {
-        return result = 'science-fiction'
+        return result = 4
 
     } else if (compteurHorror > compteurAction &&
         compteurHorror > compteurRomance &&
         compteurHorror > compteurComedy &&
         compteurHorror > compteurSF) {
-        return result = 'horror'
+        return result = 5
     }
+    if (result === 1) {
 
+    }
 }
+
 
 
 /** answers 
