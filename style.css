@@ -81,8 +81,8 @@ body {
     height: 800px;
 }
 #reponse {
-    display: grid;
-    margin: 0% 20% 20%;
+    display: vertical;
+    margin: 0% 0% 0% 5%;
 }
 
 .button:hover {
