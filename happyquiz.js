@@ -173,42 +173,19 @@ function resultat() {
 
 
 
-/** answers 
- * action = 1 // romance = 2 // comédie = 3 // science-fiction : 4 // horreur = 5
- * harry potter = 4
- * fight club = 3
- * interstellar = 5
- * titanic = 2
- * spider-man = 1
- * 
- * strong = 1
- * passionate = 2
- * intelligent = 3
- * adventurous = 4
- * mysterious = 5
- * 
- * cersei = 5
- * eve = 1
- * annalise = 3
- * eleven = 4
- * rue = 2
- * 
- * integrity = 1
- * wisdom = 3
- * freedom = 4
- * community = 2
- * money = 5
- * 
- * space = 4
- * post = 5
- * flowers = 2
- * city = 3
- * village = 1
- * 
- * damso = 5
- * beyoncé = 1
- * drake = 3
- * aya = 2
- * the weeknd = 4
- * 
-*/
+buttontest.addEventListener('click', async (e) => {
+    // prevent default form behaviour
+    e.preventDefault()
+
+    try {
+        const res = await fetch(`https://api.jikan.moe/v4/anime?genres=1&order_by=popularity&type=tv`);
+        const data = await res.json();
+        console.log(data)
+
+            reponse.innerHTML = data.data[0].title   
+
+    } catch (err) {
+        console.log(err);
+        topp.innerHTML = `<p>${err}</p>`;
+    }
+})
