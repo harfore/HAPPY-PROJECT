@@ -34,11 +34,11 @@ function posequestion1() {
 function posequestion2() {
     question.innerHTML = `<h1>${tabq[1]}</h1>`
     reponse.innerHTML =
-        `<button class="button" onclick="posequestion4(); addAction()"><img height=140 src="image/action.gif"><br><b>${tabr[1].a}</b></button>
-<button class="button" onclick="posequestion4(); addRomance()"><img height=140 src="image/loveStory.gif"><br><b>${tabr[1].b}</b></button>
-<button class="button" onclick="posequestion4(); addComedy()"><img height=140 src="image/comedy.gif"><br><b>${tabr[1].c}</b></button>
-<button class="button" onclick="posequestion4(); addSF()"><img height=140 src="image/sciFi.gif"><br><b>${tabr[1].d}</b></button>
-<button class="button" onclick="posequestion4(); addHorror()"><img height=140 src="image/horror.gif"><br><b>${tabr[1].e}</b></button>`
+        `<button class="button" onclick="posequestion4(); addAction2()"><img height=140 src="image/action.gif"><br><b>${tabr[1].a}</b></button>
+<button class="button" onclick="posequestion4(); addRomance2()"><img height=140 src="image/loveStory.gif"><br><b>${tabr[1].b}</b></button>
+<button class="button" onclick="posequestion4(); addComedy2()"><img height=140 src="image/comedy.gif"><br><b>${tabr[1].c}</b></button>
+<button class="button" onclick="posequestion4(); addSF2()"><img height=140 src="image/sciFi.gif"><br><b>${tabr[1].d}</b></button>
+<button class="button" onclick="posequestion4(); addHorror2()"><img height=140 src="image/horror.gif"><br><b>${tabr[1].e}</b></button>`
 }
 
 function posequestion4() {
@@ -128,41 +128,61 @@ const addHorror = () => {
     console.log(compteurHorror)
     return compteurHorror
 }
+const addAction2 = () => {
+    compteurAction += 6
+    console.log(compteurAction)
+    return compteurAction
+}
+
+const addRomance2 = () => {
+    compteurRomance += 6
+    console.log(compteurRomance)
+    return compteurRomance
+}
+
+const addComedy2 = () => {
+    compteurComedy += 6
+    console.log(compteurComedy)
+    return compteurComedy
+}
+
+const addSF2 = () => {
+    compteurSF += 6
+    console.log(compteurSF)
+    return compteurSF
+}
+
+const addHorror2 = () => {
+
+    compteurHorror += 6
+    console.log(compteurHorror)
+    return compteurHorror
+}
+
+
 let result = 0
+let genre = 0
 function resultat() {
     document.getElementById('buttontest').style.display = 'block'
     question.innerHTML = ""
     reponse.innerHTML = ""
-    if (compteurAction > compteurComedy &&
-        compteurAction > compteurHorror &&
-        compteurAction > compteurRomance &&
-        compteurAction > compteurSF) {
+    genre = Math.max(compteurAction,compteurComedy,compteurHorror,compteurRomance,compteurSF)
+    if (genre == compteurAction) {
         return result = 1
 
-    } else if (compteurRomance > compteurAction &&
-        compteurRomance > compteurComedy &&
-        compteurRomance > compteurHorror &&
-        compteurRomance > compteurSF) {
+    } else if (genre == compteurRomance) {
         return result = 22
 
-    } else if (compteurComedy > compteurAction &&
-        compteurComedy > compteurHorror &&
-        compteurComedy > compteurSF &&
-        compteurComedy > compteurHorror) {
+    } else if (genre == compteurComedy) {
         return result = 4
 
-    } else if (compteurSF > compteurAction &&
-        compteurSF > compteurRomance &&
-        compteurSF > compteurComedy &&
-        compteurSF > compteurHorror) {
+    } else if (genre == compteurSF) {
         return result = 24
 
-    } else if (compteurHorror > compteurAction &&
-        compteurHorror > compteurRomance &&
-        compteurHorror > compteurComedy &&
-        compteurHorror > compteurSF) {
+    } else if (genre == compteurHorror) {
         return result = 14
     }
+    
 }
 
 const afficheresultat = document.getElementById('resultat')
@@ -170,7 +190,7 @@ buttontest.addEventListener('click', async (e) => {
     // prevent default form behaviour
     e.preventDefault()
 
-    try {
+    try {console.log(result)
         document.getElementById('buttontest').style.display = 'none'
         document.getElementById('start').style.display = 'block'
         const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${result}&order_by=popularity&type=tv&status=complete&sort=asc`);
