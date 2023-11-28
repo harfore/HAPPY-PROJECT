@@ -197,7 +197,7 @@ buttontest.addEventListener('click', async (e) => {
         const data = await res.json();
         console.log(data)
         for (i = 0; i < 6; i++) {
-            afficheresultat.innerHTML += `<br><br><h2>` + data.data[i].title + `</h2>`
+            afficheresultat.innerHTML += `<br><br><h2>` + data.data[i].title_english + `</h2>`
             afficheresultat.innerHTML += `<img src="${data.data[i].images.jpg.image_url}"><br><br>`
             afficheresultat.innerHTML += data.data[i].synopsis + `<br><br>`
             afficheresultat.innerHTML += `<u>Number of episodes :</u> ` + data.data[i].episodes + `<br><br>`
