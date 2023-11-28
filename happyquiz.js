@@ -188,9 +188,13 @@ buttontest.addEventListener('click', async (e) => {
         const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${result}&order_by=popularity&type=tv`);
         const data = await res.json();
         console.log(data)
-        afficheresultat.innerHTML = data.data[0].title
-        afficheresultat.innerHTML = data.data[0].synopsis
-        url2 = "image/space.jpg"
+        afficheresultat.innerHTML += data.data[1].title + `<br>`
+        afficheresultat.innerHTML += data.data[1].synopsis + `<br>`
+        afficheresultat.innerHTML += `Nombres d'épisodes : ` + data.data[1].episodes + `<br>`
+        afficheresultat.innerHTML += `Durée d'un épisode : ` + data.data[1].duration + `<br>`
+        afficheresultat.innerHTML += `Score : ` + data.data[1].score + `<br>`
+        afficheresultat.innerHTML += `Année : ` + data.data[1].year
+        url2 = data.data[1].images.jpg.image_url
         poster.src = url2
 
     } catch (err) {
