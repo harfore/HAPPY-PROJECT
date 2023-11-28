@@ -181,21 +181,17 @@ buttontest.addEventListener('click', async (e) => {
     e.preventDefault()
 
     try {
-        const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${result}&order_by=score&type=tv&sort=asc`);
+        const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${result}&order_by=popularity&type=tv&status=complete&sort=asc`);
         const data = await res.json();
         console.log(data)
-        for (i = 0; i < 6; i++) {
-            if (data.data.score === null) {
-
-            } else {
-                afficheresultat.innerHTML += `<img src="${data.data[i].images.jpg.image_url}"><br>`
+        for (i = 0; i < 6 ; i++) {
                 afficheresultat.innerHTML += data.data[i].title + `<br>`
+                afficheresultat.innerHTML += `<img src="${data.data[i].images.jpg.image_url}"><br>`
                 afficheresultat.innerHTML += data.data[i].synopsis + `<br>`
                 afficheresultat.innerHTML += `Nombres d'épisodes : ` + data.data[i].episodes + `<br>`
                 afficheresultat.innerHTML += `Durée d'un épisode : ` + data.data[i].duration + `<br>`
-                afficheresultat.innerHTML += `Score : ` + data.data[i].score + `<br>`
                 afficheresultat.innerHTML += `Année : ` + data.data[i].year + `<br><br>`
-            }
+                afficheresultat.innerHTML += `Score : ` + data.data[i].score + `<br>`
         }
     } catch (err) {
         console.log(err);
