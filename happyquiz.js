@@ -5,7 +5,7 @@ let conteneur = document.getElementById('conteneur')
 let tabq = ["Which of these movies was your favorite?",
     "What genre is typically your favorite?",
     "What's for dinner?",
-    "What character trait is your favorite?",
+    "Which character trait is your favorite?",
     "Pick a female series character.",
     "Which of these do you value most ?",
     "Pick a music artist.",
@@ -174,10 +174,6 @@ function resultat() {
      */
 }
 
-let poster = document.getElementById("imageresultat");
-let url2 = "";
-poster.src = url2
-
 
 const afficheresultat = document.getElementById('resultat')
 buttontest.addEventListener('click', async (e) => {
@@ -185,18 +181,22 @@ buttontest.addEventListener('click', async (e) => {
     e.preventDefault()
 
     try {
-        const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${result}&order_by=popularity&type=tv`);
+        const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${result}&order_by=score&type=tv&sort=asc`);
         const data = await res.json();
         console.log(data)
-        afficheresultat.innerHTML += data.data[1].title + `<br>`
-        afficheresultat.innerHTML += data.data[1].synopsis + `<br>`
-        afficheresultat.innerHTML += `Nombres d'épisodes : ` + data.data[1].episodes + `<br>`
-        afficheresultat.innerHTML += `Durée d'un épisode : ` + data.data[1].duration + `<br>`
-        afficheresultat.innerHTML += `Score : ` + data.data[1].score + `<br>`
-        afficheresultat.innerHTML += `Année : ` + data.data[1].year
-        url2 = data.data[1].images.jpg.image_url
-        poster.src = url2
+        for (i = 0; i < 6; i++) {
+            if (data.data.score === null) {
 
+            } else {
+                afficheresultat.innerHTML += `<img src="${data.data[i].images.jpg.image_url}"><br>`
+                afficheresultat.innerHTML += data.data[i].title + `<br>`
+                afficheresultat.innerHTML += data.data[i].synopsis + `<br>`
+                afficheresultat.innerHTML += `Nombres d'épisodes : ` + data.data[i].episodes + `<br>`
+                afficheresultat.innerHTML += `Durée d'un épisode : ` + data.data[i].duration + `<br>`
+                afficheresultat.innerHTML += `Score : ` + data.data[i].score + `<br>`
+                afficheresultat.innerHTML += `Année : ` + data.data[i].year + `<br><br>`
+            }
+        }
     } catch (err) {
         console.log(err);
         topp.innerHTML = `<p>${err}</p>`;
