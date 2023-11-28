@@ -7,7 +7,7 @@ youtube.style.display = "none";
 let url = 'image/tv.gif';
 let pose = 1;
 photo.src = url;
-title.innerText = "Top 3 trendy animes";
+title.innerText = "TOP 3 TRENDY ANIMES";
 
 let buttonright = document.getElementById('buttonright')
 buttonright.addEventListener('click', async (e) => {
@@ -43,7 +43,7 @@ buttonright.addEventListener('click', async (e) => {
             pose = 4
         }
         else if (pose == 4) {
-            title.innerText = "Top 3 trendy animes"
+            title.innerText = "TOP 3 TRENDY ANIMES"
             url = 'image/tv.gif'
             photo.src = url
             youtube.src = ''
@@ -73,7 +73,7 @@ buttonleft.addEventListener('click', async (e) => {
             pose = 4
         }
         else if (pose == 2) {
-            title.innerText = "Top 3 trendy animes"
+            title.innerText = "TOP 3 TRENDY ANIMES"
             url = 'image/tv.gif'
             photo.src = url
             youtube.src = ''
