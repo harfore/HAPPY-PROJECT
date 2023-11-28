@@ -22,7 +22,7 @@ let tabr = [{ a: "Harry Potter and the Prisoner of Azkaban (2004)", b: "Fight Cl
 
 function posequestion1() {
     afficheresultat.innerHTML = ""
-    question.innerHTML = `<h1>${tabq[0]}</h1>`
+    question.innerHTML = `<h2>${tabq[0]}</h2>`
     reponse.innerHTML =
         `<button class="button" onclick="posequestion2(); addSF()"><img height=120 src="image/harryPotter.gif"><br><b>${tabr[0].a}</b></button>
 <button class="button" onclick="posequestion2(); addComedy()"><img height=120 src="image/fightClub.gif"><br><b>${tabr[0].b}</b></button>
@@ -32,7 +32,7 @@ function posequestion1() {
 
 }
 function posequestion2() {
-    question.innerHTML = `<h1>${tabq[1]}</h1>`
+    question.innerHTML = `<h2>${tabq[1]}</h2>`
     reponse.innerHTML =
         `<button class="button" onclick="posequestion4(); addAction2()"><img height=140 src="image/action.gif"><br><b>${tabr[1].a}</b></button>
 <button class="button" onclick="posequestion4(); addRomance2()"><img height=140 src="image/loveStory.gif"><br><b>${tabr[1].b}</b></button>
@@ -42,7 +42,7 @@ function posequestion2() {
 }
 
 function posequestion4() {
-    question.innerHTML = `<h1>${tabq[3]}</h1>`
+    question.innerHTML = `<h2>${tabq[3]}</h2>`
     reponse.innerHTML =
         `<button class="button" onclick="posequestion5(); addHorror()"><img height=130 src="image/intelligent.webp"><br><b>${tabr[3].a}</b></button>
 <button class="button" onclick="posequestion5(); addRomance()"><img height=130 src="image/mysterious.webp"><br><b>${tabr[3].b}</b></button>
@@ -52,7 +52,7 @@ function posequestion4() {
 }
 
 function posequestion5() {
-    question.innerHTML = `<h1>${tabq[4]}</h1>`
+    question.innerHTML = `<h2>${tabq[4]}</h2>`
     reponse.innerHTML =
         `<button class="button" onclick="posequestion6(); addHorror()"><img height=125 src="image/cersei-lannister-game-of-thrones.gif"><br><b>${tabr[4].a}</b></button>
 <button class="button" onclick="posequestion6(); addAction()"><img height=125 src="image/eve polastri.gif"><br><b>${tabr[4].b}</b></button>
@@ -62,7 +62,7 @@ function posequestion5() {
 }
 
 function posequestion6() {
-    question.innerHTML = `<h1>${tabq[5]}</h1>`
+    question.innerHTML = `<h2>${tabq[5]}</h2>`
     reponse.innerHTML =
         `<button class="button" onclick="posequestion7(); addAction()"><img height=150 src="image/integrity.webp"><br><b>${tabr[5].a}</b></button>
 <button class="button" onclick="posequestion7(); addComedy()"><img height=150 src="image/wisdom.gif"><br><b>${tabr[5].b}</b></button>
@@ -72,17 +72,17 @@ function posequestion6() {
 }
 
 function posequestion7() {
-    question.innerHTML = `<h1>${tabq[6]}</h1>`
+    question.innerHTML = `<h2>${tabq[6]}</h2>`
     reponse.innerHTML =
-        `<button class="button" onclick="posequestion8(); addSF()"><img height=140 src="image/damso.gif"><br>${tabr[6].a}</button>
-<button class="button" onclick="posequestion8(); addAction()"><img height=140 src="image/beyoncé.webp"><br>${tabr[6].b}</button>
-<button class="button" onclick="posequestion8(); addHorror()"><img height=140 src="image/the weeknd.webp"><br>${tabr[6].c}</button>
-<button class="button" onclick="posequestion8(); addComedy()"><img height=140 src="image/drake.gif"><br>${tabr[6].d}</button>
-<button class="button" onclick="posequestion8(); addRomance()"><img height=140 src="image/aya.gif"><br>${tabr[6].e}</button>`
+        `<button class="button" onclick="posequestion8(); addSF()"><img height=140 src="image/damso.gif"><br><b>${tabr[6].a}</b></button>
+<button class="button" onclick="posequestion8(); addAction()"><img height=140 src="image/beyoncé.webp"><br><b>${tabr[6].b}</b></button>
+<button class="button" onclick="posequestion8(); addHorror()"><img height=140 src="image/the weeknd.webp"><br><b>${tabr[6].c}</b></button>
+<button class="button" onclick="posequestion8(); addComedy()"><img height=140 src="image/drake.gif"><br><b>${tabr[6].d}</b></button>
+<button class="button" onclick="posequestion8(); addRomance()"><img height=140 src="image/aya.gif"><br><b>${tabr[6].e}</b></button>`
 }
 
 function posequestion8() {
-    question.innerHTML = `<h1>${tabq[7]}</h1>`
+    question.innerHTML = `<h2>${tabq[7]}</h2>`
     reponse.innerHTML =
         `<button onclick="resultat(); addHorror"><img width="200" height="400" style="border:1px solid" src="pictures/post.png">${tabr[7].a}</button>
 <button onclick="resultat(); addRomance()"><img width="200" height="400" style="border:1px solid" src="pictures/pink.png">${tabr[7].b}</button>
@@ -166,7 +166,7 @@ function resultat() {
     document.getElementById('buttontest').style.display = 'block'
     question.innerHTML = ""
     reponse.innerHTML = ""
-    genre = Math.max(compteurAction,compteurComedy,compteurHorror,compteurRomance,compteurSF)
+    genre = Math.max(compteurAction, compteurComedy, compteurHorror, compteurRomance, compteurSF)
     if (genre == compteurAction) {
         return result = 1
 
@@ -182,7 +182,7 @@ function resultat() {
     } else if (genre == compteurHorror) {
         return result = 14
     }
-    
+
 }
 
 const afficheresultat = document.getElementById('resultat')
@@ -190,7 +190,8 @@ buttontest.addEventListener('click', async (e) => {
     // prevent default form behaviour
     e.preventDefault()
 
-    try {console.log(result)
+    try {
+        console.log(result)
         document.getElementById('buttontest').style.display = 'none'
         document.getElementById('start').style.display = 'block'
         const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${result}&order_by=popularity&type=tv&status=complete&sort=asc`);
