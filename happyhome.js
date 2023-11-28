@@ -62,7 +62,7 @@ buttonleft.addEventListener('click', async (e) => {
     e.preventDefault()
 
     try {
-        const res = await fetch(`https://api.jikan.moe/v4/top/anime?filter=airing&order_by=popularity`);
+        const res = await fetch(`https://api.jikan.moe/v4/top/anime?filter=airing&order_by=popularity&sort=asc`);
         const data = await res.json();
         if (pose == 1) {
             title.innerText = data.data[2].title
