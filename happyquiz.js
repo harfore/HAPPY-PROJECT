@@ -127,12 +127,11 @@ const addHorror = () => {
     console.log(compteurHorror)
     return compteurHorror
 }
-
+let result = 0
 function resultat() {
     document.getElementById('buttontest').style.display = 'block'
     question.innerHTML = ""
     reponse.innerHTML = ""
-    let result;
     if (compteurAction > compteurComedy &&
         compteurAction > compteurHorror &&
         compteurAction > compteurRomance &&
@@ -143,25 +142,25 @@ function resultat() {
         compteurRomance > compteurComedy &&
         compteurRomance > compteurHorror &&
         compteurRomance > compteurSF) {
-        return result = 2
+        return result = 22
 
     } else if (compteurComedy > compteurAction &&
         compteurComedy > compteurHorror &&
         compteurComedy > compteurSF &&
         compteurComedy > compteurHorror) {
-        return result = 3
+        return result = 4
 
     } else if (compteurSF > compteurAction &&
         compteurSF > compteurRomance &&
         compteurSF > compteurComedy &&
         compteurSF > compteurHorror) {
-        return result = 4
+        return result = 24
 
     } else if (compteurHorror > compteurAction &&
         compteurHorror > compteurRomance &&
         compteurHorror > compteurComedy &&
         compteurHorror > compteurSF) {
-        return result = 5
+        return result = 14
     }
     /** à tirer de l'api pour le résultat :
      * - images
@@ -186,7 +185,7 @@ buttontest.addEventListener('click', async (e) => {
     e.preventDefault()
 
     try {
-        const res = await fetch(`https://api.jikan.moe/v4/anime?genres=1&order_by=popularity&type=tv`);
+        const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${result}&order_by=popularity&type=tv`);
         const data = await res.json();
         console.log(data)
         afficheresultat.innerHTML = data.data[0].title
