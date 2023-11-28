@@ -94,6 +94,7 @@ body {
 }
 
 .buttontest {
+    display: none;
     height: 40px;
     width: 200px;
     align-items: center;

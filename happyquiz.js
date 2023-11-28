@@ -122,12 +122,16 @@ const addSF = () => {
 }
 
 const addHorror = () => {
+
     compteurHorror += 5
     console.log(compteurHorror)
     return compteurHorror
 }
 
 function resultat() {
+    document.getElementById('buttontest').style.display='block'
+    question.innerHTML = ""
+    reponse.innerHTML = ""
     let result;
     if (compteurAction > compteurComedy &&
         compteurAction > compteurHorror &&
@@ -172,7 +176,7 @@ function resultat() {
 }
 
 
-
+const afficheresultat = document.getElementById('resultat')
 buttontest.addEventListener('click', async (e) => {
     // prevent default form behaviour
     e.preventDefault()
@@ -181,9 +185,8 @@ buttontest.addEventListener('click', async (e) => {
         const res = await fetch(`https://api.jikan.moe/v4/anime?genres=1&order_by=popularity&type=tv`);
         const data = await res.json();
         console.log(data)
-
-            reponse.innerHTML = data.data[0].title   
-
+        afficheresultat.innerHTML = data.data[0].title
+        afficheresultat.innerHTML = data.data[0].synopsis   
     } catch (err) {
         console.log(err);
         topp.innerHTML = `<p>${err}</p>`;
