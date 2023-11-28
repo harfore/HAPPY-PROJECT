@@ -24,10 +24,10 @@ function posequestion1() {
     question.innerHTML = `<h1>${tabq[0]}</h1>`
     reponse.innerHTML =
         `<button class="button" onclick="posequestion2(); addSF()"><img height=120 src="image/harryPotter.gif"><br><b>${tabr[0].a}</b></button>
-<button class="button" onclick="posequestion2(); addComedy()"><img height=120 src="image/fightClub.gif"><br>${tabr[0].b}</button>
-<button class="button" onclick="posequestion2(); addHorror()"><img height=120 src="image/interstellar.gif"><br>${tabr[0].c}</button>
-<button class="button" onclick="posequestion2(); addRomance()"><img height=120 src="image/titanic.gif"><br>${tabr[0].d}</button>
-<button class="button" onclick="posequestion2(); addAction()"><img height=120 src="image/spiderman.gif"><br>${tabr[0].e}</button>`
+<button class="button" onclick="posequestion2(); addComedy()"><img height=120 src="image/fightClub.gif"><br><b>${tabr[0].b}</b></button>
+<button class="button" onclick="posequestion2(); addHorror()"><img height=120 src="image/interstellar.gif"><br><b>${tabr[0].c}</b></button>
+<button class="button" onclick="posequestion2(); addRomance()"><img height=120 src="image/titanic.gif"><br><b>${tabr[0].d}</b></button>
+<button class="button" onclick="posequestion2(); addAction()"><img height=120 src="image/spiderman.gif"><br><b>${tabr[0].e}</b></button>`
 
 }
 function posequestion2() {
@@ -129,7 +129,7 @@ const addHorror = () => {
 }
 
 function resultat() {
-    document.getElementById('buttontest').style.display='block'
+    document.getElementById('buttontest').style.display = 'block'
     question.innerHTML = ""
     reponse.innerHTML = ""
     let result;
@@ -175,6 +175,10 @@ function resultat() {
      */
 }
 
+let poster = document.getElementById("imageresultat");
+let url2 = "";
+poster.src = url2
+
 
 const afficheresultat = document.getElementById('resultat')
 buttontest.addEventListener('click', async (e) => {
@@ -186,7 +190,10 @@ buttontest.addEventListener('click', async (e) => {
         const data = await res.json();
         console.log(data)
         afficheresultat.innerHTML = data.data[0].title
-        afficheresultat.innerHTML = data.data[0].synopsis   
+        afficheresultat.innerHTML = data.data[0].synopsis
+        url2 = "image/space.jpg"
+        poster.src = url2
+
     } catch (err) {
         console.log(err);
         topp.innerHTML = `<p>${err}</p>`;
