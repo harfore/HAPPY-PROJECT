@@ -1,7 +1,5 @@
 # HAPPY PROJECT
-
-Group Project - 3 students, 2 weeks <br />
-Made with @felikarina and @hanaevernon
+## Made with @felikarina and @hanaevernon over 10 days
 
 Built with HTML, CSS and JavaScript, our HAPPY PROJECT welcomes you with a home page that includes a banner where you can scroll through the 3 most trendy shows at the moment.
 A trailer for each one will appear right below the banner.
