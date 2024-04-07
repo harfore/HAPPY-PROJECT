@@ -12,7 +12,7 @@ Pushing the "Start the quiz" button presents you with 7 successive questions acc
 ![home page](/readme-images/README3.png)
 ![home page](/readme-images/README4.png)
 
-Once we get a feel of what it is you like to watch, the code pulls data from the Jikan API to suggest the 5 highest-rated anime series of the genre you seem to most appreciate.
+Once we get a feel of what it is you like to watch, the code pulls data from the Jikan API to suggest the 5 most popular anime series of the genre you seem to most appreciate.
 Along with the poster, the code displays a summary and the number of episodes to help you make your mind up.
 ![home page](/readme-images/README5.png)
 ![home page](/readme-images/README6.png)
